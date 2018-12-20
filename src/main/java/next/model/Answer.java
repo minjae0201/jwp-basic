@@ -8,9 +8,10 @@ public class Answer {
 	private String contents;
 	private Date   createdDate;
 	private long   questionId;
+	private int countOfAnswer;
 		
-	public Answer(String writer, String contents){
-		this(0, writer, contents, new Date(), 0);
+	public Answer(String writer, String contents, long questionId){
+		this(0, writer, contents, new Date(), questionId);
 	}
 		
 	public Answer(long answerId, String writer, String contents, Date createdDate, long questionId) {
@@ -33,12 +34,24 @@ public class Answer {
 		return contents;
 	}
 	
+	public Date getCreatedDate() {
+		return createdDate;
+	}
+	
 	public long getTimeFromCreatedDate() {
 		return this.createdDate.getTime();
 	}
 	
 	public long getQuestionId() {
 		return questionId;
+	}
+	
+	public int getCountOfAnswer() {
+		return countOfAnswer;
+	}
+	
+	public void setCountOfAnswer(int count) {
+		this.countOfAnswer = count;
 	}
 	
 	@Override
