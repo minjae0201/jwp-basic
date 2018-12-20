@@ -32,7 +32,7 @@ $(".qna-comment").on("click", ".form-delete", deleteAnswer);
 
 function deleteAnswer(e){
 	e.preventDefault();
-	
+
 	var deleteBtn = $(this);
 	var queryString = deleteBtn.closest("form").serialize();
 	
