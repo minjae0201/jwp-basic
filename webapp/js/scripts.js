@@ -45,7 +45,7 @@ function deleteAnswer(e){
 					alter("error!");
 				},
 		success : function(json, status){
-		        	if(json.status){
+		        	if(json.status)}
 		        		deleteBtn.closest('article').remove();
 		        	}
 				}
